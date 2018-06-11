@@ -1,0 +1,26 @@
+[0511/192929.555:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0511/192929.557:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0511/192929.557:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7ff9a3bc3218 of 12 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0511/192929.558:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[0511/192929.558:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0511/192929.558:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0531/093500.028:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.029:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0531/093500.030:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0531/093500.031:ERROR:exception_snapshot_win.cc(88)] thread ID 18832 not found in process
+[0531/093500.031:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0611/183746.262:ERROR:process_info.cc(359)] UncheckedAllocate
