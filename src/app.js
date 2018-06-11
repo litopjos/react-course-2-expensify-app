@@ -24,9 +24,9 @@ store.subscribe(()=>{
 
 
 
-store.dispatch(addExpense({description:"water bill", amount:4500, createAt:275}));
-store.dispatch(addExpense({description:"gas bill", amount:225, createAt:1000}));
-store.dispatch(addExpense({description:"rent", amount:10950, createAt:50}));
+//store.dispatch(addExpense({description:"water bill", amount:4500, createAt:275}));
+//store.dispatch(addExpense({description:"gas bill", amount:225, createAt:1000}));
+//store.dispatch(addExpense({description:"rent", amount:10950, createAt:50}));
 
 //store.dispatch(setTextFilter("bill"));
 
