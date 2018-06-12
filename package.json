@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --watch",
+    "serve": "live-server public/",
+    "build:dev": "webpack --watch",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server --open"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "extract-text-webpack-plugin": "3.0.0",
     "moment": "2.18.1",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
