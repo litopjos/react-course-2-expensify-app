@@ -25,13 +25,13 @@ module.exports = (env)=>{
                     use: CSSExtract.extract({
                         use:[
                                 {
-                                    loader: 'css-Loader',
+                                    loader: 'css-loader',
                                     options: {
                                         sourceMap:true
                                     }
                                 },
                                 {
-                                    loader: 'sass-Loader',
+                                    loader: 'sass-loader',
                                     options: {
                                         sourceMap:true
                                     }
