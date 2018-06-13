@@ -21,15 +21,6 @@ store.subscribe(()=>{
     console.log(visibleExpenses);
 })
 
-
-
-
-//store.dispatch(addExpense({description:"water bill", amount:4500, createAt:275}));
-//store.dispatch(addExpense({description:"gas bill", amount:225, createAt:1000}));
-//store.dispatch(addExpense({description:"rent", amount:10950, createAt:50}));
-
-//store.dispatch(setTextFilter("bill"));
-
 const jsx = (
     <Provider store = {store} >
        <Routes/>
@@ -38,7 +29,4 @@ const jsx = (
 
 ReactDOM.render(jsx, document.getElementById('app'));
 
-//setTimeout(()=>{
-//    store.dispatch(setTextFilter("water"));
-//},3000)
 
