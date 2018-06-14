@@ -12,7 +12,7 @@
     "build:dev": "webpack --watch",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server --open",
-    "heroku-postbuild" : "yarn run build:prod"
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "babel-core": "6.25.0",
@@ -39,7 +39,11 @@
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "8.0.0",
-    "webpack": "3.1.0",
+    "webpack": "3.1.0"
+
+  },
+  "devDependencies": {
     "webpack-dev-server": "2.5.1"
+
   }
 }

@@ -1,7 +1,7 @@
 const path = require ('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const path_public = path.join(__dirname,"public");
+const path_public = path.join(__dirname,"public","dist");
 
 console.log(path_public);
 
@@ -53,7 +53,8 @@ module.exports = (env)=>{
         },
         devServer : {
             contentBase : path.join(__dirname,"public"),
-            historyApiFallback: true
+            historyApiFallback: true,
+            publicPath: "/dist/"
         }
     
     };
