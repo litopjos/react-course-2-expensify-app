@@ -1,7 +1,7 @@
-
+ 
 import moment from "moment";
 
-export default (expenses,{text,sortBy, startDate, endDate})=>{
+const GetFilteredExpenses = (expenses,{text,sortBy, startDate, endDate})=>{
     console.log(startDate);
 
     return expenses.filter((expense)=>{
@@ -35,3 +35,5 @@ export default (expenses,{text,sortBy, startDate, endDate})=>{
         }
     });
 }
+
+export default GetFilteredExpenses;
