@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Joselito Pe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+  C:\Program Files\nodejs\node.exe C:\Users\Joselito Pe\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add redux-thunk@2.2.0
 
 PATH: 
   C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Brackets\command;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Joselito Pe\AppData\Local\Microsoft\WindowsApps;C:\Users\Joselito Pe\AppData\Local\atom\bin;C:\Users\Joselito Pe\AppData\Local\GitHub\PortableGit_f02737a78695063deace08e96d5042710d3e32db\cmd;C:\Users\Joselito Pe\AppData\Roaming\npm;C:\Program Files\Heroku\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\Joselito Pe\AppData\Local\Microsoft\WindowsApps;C:\Users\Joselito Pe\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
@@ -19,12 +19,16 @@ npm manifest:
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "engines": {
+      "node": "8.1.2"
+    },
     "scripts": {
-      "start:" "node server/server.js"
+      "start": "node server/server.js",
       "serve": "live-server public/",
       "build:dev": "webpack --watch",
       "build:prod": "webpack -p --env production",
-      "dev-server": "webpack-dev-server --open"
+      "dev-server": "webpack-dev-server --open",
+      "heroku-postbuild": "yarn run build:prod"
     },
     "dependencies": {
       "babel-core": "6.25.0",
@@ -36,9 +40,11 @@ npm manifest:
       "css-loader": "0.28.4",
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
+      "firebase": "4.2.0",
       "moment": "2.18.1",
       "node-sass": "4.5.3",
       "normalize.css": "7.0.0",
+      "numeral": "2.0.6",
       "react": "16.0.0",
       "react-addons-shallow-compare": "15.6.0",
       "react-dates": "12.7.0",
@@ -51,7 +57,9 @@ npm manifest:
       "style-loader": "0.18.2",
       "uuid": "3.1.0",
       "validator": "8.0.0",
-      "webpack": "3.1.0",
+      "webpack": "3.1.0"
+    },
+    "devDependencies": {
       "webpack-dev-server": "2.5.1"
     }
   }
@@ -1089,6 +1097,10 @@ Lockfile:
       caniuse-lite "^1.0.30000792"
       electron-to-chromium "^1.3.30"
   
+  buffer-equal-constant-time@1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz#f8e71132f7ffe6e01a5c9697a4c6f3e48d5cc819"
+  
   buffer-indexof@^1.0.0:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/buffer-indexof/-/buffer-indexof-1.1.1.tgz#52fabcc6a606d1a00302802648ef68f639da268c"
@@ -1750,6 +1762,10 @@ Lockfile:
     dependencies:
       buffer-indexof "^1.0.0"
   
+  dom-storage@^2.0.2:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/dom-storage/-/dom-storage-2.1.0.tgz#00fb868bc9201357ea243c7bcfd3304c1e34ea39"
+  
   domain-browser@^1.1.1:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -1759,6 +1775,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
     dependencies:
       jsbn "~0.1.0"
+  
+  ecdsa-sig-formatter@1.0.10:
+    version "1.0.10"
+    resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.10.tgz#1c595000f04a8897dfb85000892a0f4c33af86c3"
+    dependencies:
+      safe-buffer "^5.0.1"
   
   ee-first@1.1.1:
     version "1.1.1"
@@ -2118,6 +2140,12 @@ Lockfile:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
   
+  faye-websocket@0.9.3:
+    version "0.9.3"
+    resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.9.3.tgz#482a505b0df0ae626b969866d3bd740cdb962e83"
+    dependencies:
+      websocket-driver ">=0.5.1"
+  
   faye-websocket@^0.10.0:
     version "0.10.0"
     resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.10.0.tgz#4e492f8d04dfb6f89003507f6edbf2d501e7c6f4"
@@ -2209,6 +2237,16 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
     dependencies:
       locate-path "^2.0.0"
+  
+  firebase@4.2.0:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.2.0.tgz#9181a0a22c6afc2b27bd810789beac48a438207d"
+    dependencies:
+      dom-storage "^2.0.2"
+      faye-websocket "0.9.3"
+      jsonwebtoken "^7.3.0"
+      promise-polyfill "^6.0.2"
+      xmlhttprequest "^1.8.0"
   
   flatten@^1.0.2:
     version "1.0.2"
@@ -2516,6 +2554,10 @@ Lockfile:
       hash.js "^1.0.3"
       minimalistic-assert "^1.0.0"
       minimalistic-crypto-utils "^1.0.1"
+  
+  hoek@2.x.x:
+    version "2.16.3"
+    resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
   
   hoek@4.x.x:
     version "4.2.1"
@@ -2947,6 +2989,10 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   
+  isemail@1.x.x:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/isemail/-/isemail-1.2.0.tgz#be03df8cc3e29de4d2c5df6501263f1fa4595e9a"
+  
   isexe@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -2971,6 +3017,15 @@ Lockfile:
   isstream@~0.1.2:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+  
+  joi@^6.10.1:
+    version "6.10.1"
+    resolved "https://registry.yarnpkg.com/joi/-/joi-6.10.1.tgz#4d50c318079122000fe5f16af1ff8e1917b77e06"
+    dependencies:
+      hoek "2.x.x"
+      isemail "1.x.x"
+      moment "2.x.x"
+      topo "1.x.x"
   
   js-base64@^2.1.8, js-base64@^2.1.9:
     version "2.4.5"
@@ -3023,6 +3078,16 @@ Lockfile:
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   
+  jsonwebtoken@^7.3.0:
+    version "7.4.3"
+    resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-7.4.3.tgz#77f5021de058b605a1783fa1283e99812e645638"
+    dependencies:
+      joi "^6.10.1"
+      jws "^3.1.4"
+      lodash.once "^4.0.0"
+      ms "^2.0.0"
+      xtend "^4.0.1"
+  
   jsprim@^1.2.2:
     version "1.4.1"
     resolved "https://registry.yarnpkg.com/jsprim/-/jsprim-1.4.1.tgz#313e66bc1e5cc06e438bc1b7499c2e5c56acb6a2"
@@ -3031,6 +3096,21 @@ Lockfile:
       extsprintf "1.3.0"
       json-schema "0.2.3"
       verror "1.10.0"
+  
+  jwa@^1.1.5:
+    version "1.1.6"
+    resolved "https://registry.yarnpkg.com/jwa/-/jwa-1.1.6.tgz#87240e76c9808dbde18783cf2264ef4929ee50e6"
+    dependencies:
+      buffer-equal-constant-time "1.0.1"
+      ecdsa-sig-formatter "1.0.10"
+      safe-buffer "^5.0.1"
+  
+  jws@^3.1.4:
+    version "3.1.5"
+    resolved "https://registry.yarnpkg.com/jws/-/jws-3.1.5.tgz#80d12d05b293d1e841e7cb8b4e69e561adcf834f"
+    dependencies:
+      jwa "^1.1.5"
+      safe-buffer "^5.0.1"
   
   kind-of@^2.0.1:
     version "2.0.1"
@@ -3124,6 +3204,10 @@ Lockfile:
   lodash.mergewith@^4.6.0:
     version "4.6.1"
     resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
+  
+  lodash.once@^4.0.0:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   
   lodash.tail@^4.1.1:
     version "4.1.1"
@@ -3362,13 +3446,17 @@ Lockfile:
     version "2.18.1"
     resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
   
-  moment@>=1.6.0:
+  moment@2.x.x, moment@>=1.6.0:
     version "2.22.2"
     resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   
   ms@2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+  
+  ms@^2.0.0:
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   
   multicast-dns-service-types@^1.1.0:
     version "1.1.0"
@@ -3589,6 +3677,10 @@ Lockfile:
   number-is-nan@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
+  
+  numeral@2.0.6:
+    version "2.0.6"
+    resolved "https://registry.yarnpkg.com/numeral/-/numeral-2.0.6.tgz#4ad080936d443c2561aed9f2197efffe25f4e506"
   
   oauth-sign@~0.8.2:
     version "0.8.2"
@@ -4134,6 +4226,10 @@ Lockfile:
   process@^0.11.10:
     version "0.11.10"
     resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+  
+  promise-polyfill@^6.0.2:
+    version "6.1.0"
+    resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
   
   promise@^7.1.1:
     version "7.3.1"
@@ -5142,6 +5238,12 @@ Lockfile:
       regex-not "^1.0.2"
       safe-regex "^1.1.0"
   
+  topo@1.x.x:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/topo/-/topo-1.1.0.tgz#e9d751615d1bb87dc865db182fa1ca0a5ef536d5"
+    dependencies:
+      hoek "2.x.x"
+  
   tough-cookie@~2.3.3:
     version "2.3.4"
     resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
@@ -5482,7 +5584,11 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   
-  xtend@^4.0.0:
+  xmlhttprequest@^1.8.0:
+    version "1.8.0"
+    resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
+  
+  xtend@^4.0.0, xtend@^4.0.1:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
   
@@ -5556,10 +5662,6 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  SyntaxError: C:\Users\Joselito Pe\Desktop\react-course-projects\expensify-app\package.json: Unexpected string in JSON at position 119
-      at JSON.parse (<anonymous>)
-      at C:\Users\Joselito Pe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:770:59
-      at Generator.next (<anonymous>)
-      at step (C:\Users\Joselito Pe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:92:30)
-      at C:\Users\Joselito Pe\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:103:13
-      at <anonymous>
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:50:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:91:26)

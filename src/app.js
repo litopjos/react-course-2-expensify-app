@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import Routes from "./routers/AppRouter.js";
 import {addExpense} from "./actions/actions-expenses.js";
+import {startSetExpenses} from "./actions/actions-expenses.js";
 import {setTextFilter} from "./actions/actions-filters.js";
 import getVisibleExpenses from "./selectors/selector-expenses";
+import "./firebase/firebase.js";
 
 import "normalize.css/normalize.css";
 import "./styles/style.scss";
@@ -27,6 +29,18 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<h1>Loading...</h1>, document.getElementById('app'));
+
+store.dispatch(startSetExpenses())
+    .then(
+        ()=>{
+            ReactDOM.render(jsx, document.getElementById('app'));
+        }
+    )
+    .catch((e)=>{
+        alert(e);
+    });
+
+
 
 

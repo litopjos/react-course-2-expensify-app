@@ -37,6 +37,12 @@ export default (state=defaultExpensesState, action)=>{
             })
             return editedState;
         break;
+
+        case 'SET_EXPENSES':
+            console.log(action.expenses);
+            alert('SET_EXPENSES');
+            return action.expenses; 
+        break;
     }
 
     return state;

@@ -2,7 +2,7 @@
 import React from 'react';
 import ExpenseForm from "./ExpenseForm";
 import {connect} from 'react-redux';
-import {addExpense} from "../actions/actions-expenses";
+import {startAddExpense} from "../actions/actions-expenses";
 
 
 const OnSubmitFromExpenseForm = (expense)=>{
@@ -16,14 +16,13 @@ const AddExpensePage = (props)=> (
         <ExpenseForm onSubmit = {(expense)=>{
             alert('props onsubmit call');
             console.log(expense);
-            props.dispatch(addExpense(expense));
+            props.dispatch(startAddExpense(expense));
             props.history.push('/');
         }} 
         />
     </div>
 
 );
-
 
 const ConnectedAddExpensePage = connect()(AddExpensePage);
 
