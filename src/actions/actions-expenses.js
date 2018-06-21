@@ -86,6 +86,20 @@ export const removeExpense=(id)=>{
     }
 }
     
+export const startRemoveExpense=(id)=>{
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`)
+            .remove()
+            .then(()=>{
+                alert('database remove succeeded');
+                dispatch(removeExpense(id));
+            })
+    }
+}
+
+
+
+
 //EDIT_EXPENSE
 export const editExpense=(id,updates)=>{
     console.log('EDIT_EXPENSE action generator ${id},${updates}');
@@ -94,5 +108,24 @@ export const editExpense=(id,updates)=>{
             id,
             updates
     };
+}
+
+export const startEditExpense=(id,updates)=>{
+    console.log(updates);
+    alert('update break here');
+    return (dispatch)=>{
+        return database.ref(`expenses/${id}`)
+            .update(
+                {
+                    description: updates.description ? updates.description : "",
+                    note: updates.note ? updates.note : undefined,
+                    amount: updates.amount ? updates.amount : 0,
+                    createAt: updates.createAt ? updates.createAt : 0
+                }
+            )
+            .then( (ref)=>{
+                dispatch(editExpense(id,updates));
+            })
+    }
 }
 
