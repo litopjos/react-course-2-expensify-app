@@ -206,6 +206,7 @@ const store = createStore(
 
 const getVisibleExpenses=(expenses,{text,sortBy, startDate, endDate})=>{
     console.log(startDate);
+    alert("here");
 
     return expenses.filter((expense)=>{
         const startDateMatch = typeof startDate !== 'number' || startDate <= expense.createAt;
