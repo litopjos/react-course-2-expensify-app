@@ -3,10 +3,10 @@ import moment from "moment";
 
 const GetFilteredExpenses = (expenses,{text,sortBy, startDate, endDate})=>{
     console.log(startDate);
-    alert ('here2');
+
     return expenses.filter((expense)=>{
         console.log(expense);
-        alert(expense);
+
         const createdAtMoment = moment(expense.createAt);
         const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment,'day') :true;
         const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment,'day'): true;
@@ -14,8 +14,8 @@ const GetFilteredExpenses = (expenses,{text,sortBy, startDate, endDate})=>{
   //      const startDateMatch = true;
   //      const endDateMatch = true;
 
- //       const textMatch = typeof text !== 'string' || expense.description.toLowerCase().includes(text.toLowerCase());
-        const textMatch = true;
+        const textMatch = typeof text !== 'string' || expense.description.toLowerCase().includes(text.toLowerCase());
+
 
         console.log(`textmatch ${textMatch}`);
         console.log (startDateMatch && endDateMatch && textMatch);
